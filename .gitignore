@@ -1,5 +1,6 @@
 # Compiled class file
 *.class
+*/target.class*.class.org.eclipse.* *.settings.*
 
 # Log file
 *.log
