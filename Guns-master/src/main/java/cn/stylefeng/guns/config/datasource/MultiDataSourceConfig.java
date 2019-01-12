@@ -28,6 +28,7 @@ import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 import java.sql.SQLException;
@@ -139,5 +140,11 @@ public class MultiDataSourceConfig {
     @Bean
     public OptimisticLockerInterceptor optimisticLockerInterceptor() {
         return new OptimisticLockerInterceptor();
+    }
+    
+    @Bean
+    public DataSourceTransactionManager dataSourceTransactionManager(DynamicDataSource mutiDataSource) {
+		return new DataSourceTransactionManager(mutiDataSource);
+    	
     }
 }

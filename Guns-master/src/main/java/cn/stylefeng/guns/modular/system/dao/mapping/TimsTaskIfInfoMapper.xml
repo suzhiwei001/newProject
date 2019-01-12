@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.stylefeng.guns.modular.system.dao.TimsTaskIfInfoMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="cn.stylefeng.guns.modular.system.model.TimsTaskIfInfo">
+        <id column="IF_ID" property="ifId" />
+        <result column="IF_TYPE" property="ifType" />
+        <result column="IF_ENNAME" property="ifEnname" />
+        <result column="IF_CNNAME" property="ifCnname" />
+        <result column="ENV_TYPE" property="envType" />
+        <result column="APP_SNAME" property="appSname" />
+        <result column="IF_STATUS" property="ifStatus" />
+        <result column="MODIFY_UDER" property="modifyUder" />
+        <result column="MODIFY_DEPT" property="modifyDept" />
+        <result column="MODIFY_TIME" property="modifyTime" />
+        <result column="REMARK" property="remark" />
+        <result column="TIMS_UPDT" property="timsUpdt" />
+        <result column="CALLFLAG" property="callflag" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        IF_ID, IF_TYPE, IF_ENNAME, IF_CNNAME, ENV_TYPE, APP_SNAME, IF_STATUS, MODIFY_UDER, MODIFY_DEPT, MODIFY_TIME, REMARK, TIMS_UPDT, CALLFLAG
+    </sql>
+
+</mapper>

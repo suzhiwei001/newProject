@@ -1,0 +1,37 @@
+@layout("/common/_container.html"){
+<div class="ibox float-e-margins">
+    <div class="ibox-content">
+        <div class="form-horizontal">
+
+            <div class="row">
+                <div class="col-sm-6 b-r">
+                            <#input id="ifType" name="接口类型（0201-主机文件；0202开放平台文件）" value="${item.ifType}" underline="true"/>
+                            <#input id="ifEnname" name="接口英文名称" value="${item.ifEnname}" underline="true"/>
+                            <#input id="ifCnname" name="接口中文名称" value="${item.ifCnname}" underline="true"/>
+                            <#input id="envType" name="所属环境：1国内，2.fova 3.公共4.口行" value="${item.envType}" underline="true"/>
+                            <#input id="appSname" name="接口维护方应用" value="${item.appSname}" underline="true"/>
+                            <#input id="ifStatus" name="接口状态 1-正常 2-废弃 3-新增未审批 4-拟作废" value="${item.ifStatus}" />
+                </div>
+
+                <div class="col-sm-6">
+                            <#input id="modifyUder" name="维护人" value="${item.modifyUder}" underline="true"/>
+                            <#input id="modifyDept" name="维护部门" value="${item.modifyDept}" underline="true"/>
+                            <#input id="modifyTime" name="最后更新时间" value="${item.modifyTime}" underline="true"/>
+                            <#input id="remark" name="备注" value="${item.remark}" underline="true"/>
+                            <#input id="timsUpdt" name="更新时间" value="${item.timsUpdt}" underline="true"/>
+                            <#input id="callflag" name="工银亚洲调用细分标志" value="${item.callflag}" />
+                </div>
+            </div>
+
+            <div class="row btn-group-m-t">
+                <div class="col-sm-10">
+                    <#button btnCss="info" name="提交" id="ensure" icon="fa-check" clickFun="TimsTaskIfInfoInfoDlg.editSubmit()"/>
+                    <#button btnCss="danger" name="取消" id="cancel" icon="fa-eraser" clickFun="TimsTaskIfInfoInfoDlg.close()"/>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<script src="${ctxPath}/static/modular/system/timsTaskIfInfo/timsTaskIfInfo_info.js"></script>
+@}
